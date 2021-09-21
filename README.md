@@ -1,2 +1,3 @@
 # nodejs
-construir una librería propia que llamará a los diferentes módulos del core de Node.js.
+build your own library that will call the different modules of the Node.js core.
+
