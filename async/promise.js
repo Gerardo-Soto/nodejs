@@ -18,7 +18,7 @@ function talk(){
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             console.log('bla, bla, bla.');
-            resolve(username);
+            resolve();
         }, 3000);
     })
 }
