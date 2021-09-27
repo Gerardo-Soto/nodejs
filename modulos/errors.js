@@ -1,3 +1,8 @@
+function anotherFunction(){
+    return broke();
+}
+
+
 function broke(){
     return 3 + z;
 }
@@ -11,4 +16,17 @@ try {
 }
 
 console.log('End');
+
+function brokeAsynchronous(){
+    setTimeout(function() {
+        return 5 + y;
+    }, 1000);
+}
+
+try {
+    brokeAsynchronous();
+} catch (error) {
+    console.log('Asynchronous error');
+    console.error(error.message);
+}
 
