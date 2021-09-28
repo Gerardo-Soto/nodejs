@@ -27,7 +27,9 @@ function brokeAsynchronous(){
 }
 
 try {
-    brokeAsynchronous();
+    brokeAsynchronous(function(err){
+        console.log(err.message);
+    });
 } catch (error) {
     console.log('Asynchronous error');
     console.error(error.message);
