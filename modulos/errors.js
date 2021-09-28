@@ -16,12 +16,13 @@ try {
 
 console.log('End');
 
-function brokeAsynchronous(){
+function brokeAsynchronous(callback){
     setTimeout(function() {
         try {
             return 5 + y;
         } catch (error) {
-            console.log('Asynchronous errors in the function.');            
+            console.log('Asynchronous errors in the function.');
+            callback(error);
         }
     }, 1000);
 }
