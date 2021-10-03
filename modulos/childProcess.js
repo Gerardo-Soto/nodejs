@@ -10,7 +10,7 @@ exec('ls -la', (err, stdout, sterr) => {
 });
 
 
-exec('node /app/modules/console.js', (err, stdout, sterr) => {
+exec('node /app/modulos/console.js', (err, stdout, sterr) => {
     if (err) {
         console.log(err);
         return false;
