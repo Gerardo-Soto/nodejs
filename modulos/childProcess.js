@@ -10,7 +10,7 @@ exec('ls -la', (err, stdout, sterr) => {
 });
 
 
-exec('node /app/nodejs/modules/console.js', (err, stdout, sterr) => {
+exec('node /app/modules/console.js', (err, stdout, sterr) => {
     if (err) {
         console.log(err);
         return false;
@@ -18,6 +18,7 @@ exec('node /app/nodejs/modules/console.js', (err, stdout, sterr) => {
 
     console.log(stdout);
 });
+
 
 
 // Spawn
