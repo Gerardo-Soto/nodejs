@@ -4,12 +4,12 @@ console.error('Message error');
 
 console.warn('Message warning');
 
-var table = [
+var myObject = [
     {a: 1,b: 2},
     {a: 5,b: 6}
 ]
 
-console.table();
+console.table(myObject);
 
 console.group('Conversation');
 console.log('1......');
