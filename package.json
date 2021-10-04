@@ -1,0 +1,22 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "build your own library that will call the different modules of the Node.js core.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gerardo-Soto/nodejs.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Gerardo Soto <gerardo.8.soto@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gerardo-Soto/nodejs/issues"
+  },
+  "homepage": "https://github.com/Gerardo-Soto/nodejs#readme"
+}
