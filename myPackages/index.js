@@ -1,8 +1,8 @@
 // bring module by file
-const module = require('./modulo');
+const myModule = require('./modulo');
 
 // execute module
-console.log(module.greeting);
-module.farewell();
+console.log(myModule.greeting);
+myModule.farewell();
 
 
