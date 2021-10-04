@@ -4,6 +4,6 @@ function greeting(){
 
 module.exports = {
     greeting,
-    farewell = 'Good bye, World!'
+    farewell: 'Good bye, World!'
 }
 
