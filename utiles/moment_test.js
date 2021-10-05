@@ -14,3 +14,4 @@ console.log(startWort);
 let daysWork = (now - startWort) / (1000 * 3600 * 24);
 console.log('Days at work: '+ daysWork);
 
+
