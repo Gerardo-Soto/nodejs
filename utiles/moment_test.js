@@ -11,6 +11,6 @@ let startWort = moment().subtract('2', 'M');
 console.log('Start to work:');
 console.log(startWort);
 
-let daysWork = startWort.subtract(now).toDate();
+let daysWork = (now - startWort) / (1000 * 3600 * 24);
 console.log('Days at work: '+ daysWork);
 
