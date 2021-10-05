@@ -11,5 +11,16 @@ bcrypt.hash(password, 5, function(err, hash){
     } else{
         console.log(hash);
     }
+
+    // check password:
+    bcrypt.compare(password, hash, function(err, res){
+        console.log(res); // true|false
+    });
+
+    // check password:
+    bcrypt.compare('otherPassword', hash, function (err, res) {
+        console.log(res); // true|false
+    });
+
 })
 
