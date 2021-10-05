@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/Gerardo-Soto/nodejs/issues"
   },
-  "homepage": "https://github.com/Gerardo-Soto/nodejs#readme"
+  "homepage": "https://github.com/Gerardo-Soto/nodejs#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "sharp": "^0.29.1"
+  }
 }
