@@ -1,5 +1,5 @@
 //
-const bcrypt = require('bcrypy');
+const bcrypt = require('bcrypt');
 
 const password = '12345qwerty';
 
