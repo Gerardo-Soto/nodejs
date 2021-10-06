@@ -1,6 +1,6 @@
 const fs = require('fs');
 const stream = require('stream');
-const util = require('util');
+const util = require('util'); // trabajar con herencia automatica
 
 let data = '';
 

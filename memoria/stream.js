@@ -14,24 +14,23 @@ readableStream.on('data', function (chunk) {
 // Transformación para el tratado del Stream:
 const Transform = stream.Transform;
 
-function UpperLetter(){
+function Mayus(){
     Transform.call(this); // *1
 }
 
-// Ejecución:
-let upperLetter = new UpperLetter();
+util.inherits(Mayus, Transform);
 
-util.inherits(upperLetter, Transform);
-
-upperLetter.prototype._transform = function(chuck, codif, cb){// *1
-    chunkUpper = chuck.toString().toUpperCase();
-    this.push(chunkUpper);
+Mayus.prototype._transform = function(chuck, codif, cb){// *1
+    chunkMayus = chuck.toString().toUpperCase();
+    this.push(chunkMayus);
     cb();
 }
 
+// Ejecución: crear la transforemacion a mayusculas
+let mayus = new Mayus();
 
 readableStream
-    .pipe(UpperLetter)// send Stream
+    .pipe(mayus)// send Stream
     .pipe(process.stdout);// show the output on terminal
 
 
