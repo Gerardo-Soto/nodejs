@@ -11,9 +11,7 @@ function sumAsync(callback) {
 
 sumAsync(function (err, data) {
     if (err) {
-        console.error(err);
-
-        return false
+        throw err;
     }
 
     console.log('The whole process is completed.');
