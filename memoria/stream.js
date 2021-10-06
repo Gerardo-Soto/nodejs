@@ -12,7 +12,6 @@ const Transform = stream.Transform;
 function UpperLetter(){
     Transform.call(this); // *1
 }
-util.inherits(upperLetter, Transform);
 
 upperLetter.prototype._transform = function(chuck, codif, cb){// *1
     chunkUpper = chuck.toString().toUpperCase();
@@ -22,6 +21,8 @@ upperLetter.prototype._transform = function(chuck, codif, cb){// *1
 
 // Ejecución:
 let upperLetter = new UpperLetter();
+
+util.inherits(upperLetter, Transform);
 
 readableStream
     .pipe(UpperLetter)// send Stream
