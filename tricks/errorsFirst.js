@@ -11,6 +11,7 @@ function sumAsync(callback) {
 
 sumAsync(function (err, data) {
     if (err) {
+        console.error('Ouh, new error:');
         throw err;
     }
 
