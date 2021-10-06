@@ -6,3 +6,9 @@ sharp('hollowknight.JPG')
     .grayscale()
     .toFile('resized.JPG');
 
+
+
+/*
+    $9,259
+    $13,000
+*/
