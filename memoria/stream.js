@@ -6,6 +6,11 @@ let data = '';
 
 let readableStream = fs.createReadStream(__dirname + '/input.txt');
 
+readableStream.on('data', function (chunk) {
+    console.log(chunk.toString());
+})
+
+
 // Transformación para el tratado del Stream:
 const Transform = stream.Transform;
 
