@@ -30,8 +30,8 @@ const puppeteer = require('puppeteer');
     console.log(likes);// <- Principal thread log (NodeJS)
     console.log(likes.innerHTML);// <- Principal thread log (NodeJS)
     console.log('Closing browser.');
-    browser.close();
     console.log('Deleted browser.');
+    browser.close();
 }) ();
 
 
