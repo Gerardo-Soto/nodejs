@@ -21,6 +21,8 @@
   "homepage": "https://github.com/Gerardo-Soto/nodejs#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "nodemon": "^2.0.13",
+    "puppeteer": "^10.4.0",
     "sharp": "^0.29.1"
   }
 }
