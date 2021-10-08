@@ -1,7 +1,7 @@
 function sumAsync(callback) {
     setTimeout(() => {
         try {
-            let a = 8 + i;
+            let a = 8 + i; 
             callback(null, a);
         } catch (error) {
             callback(error, null);
@@ -9,15 +9,15 @@ function sumAsync(callback) {
     }, 1000);
 }
 
-try {
-    sumAsync(function (err, data) {
-        if (err) {
-            console.error('Ouh, new error:');
-            throw err;
-        }
-    
-        console.log('The whole process is completed.');
-    })
-} catch (error) {
-    console.error('Error catches: '+ error);
-}
+sumAsync(function (err, data) {
+    if (err) {
+        console.error('Ouh, new error:');
+        console.error(err);
+        return false;
+        //throw err; // No funciona para funciones asincronas
+    }
+
+    console.log('The whole process is completed.');
+})
+
+
