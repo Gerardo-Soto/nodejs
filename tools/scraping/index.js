@@ -20,14 +20,15 @@ const puppeteer = require('puppeteer');
     await page.goto('https://platzi.com/clases/2292-terminal/37358-nunca-pares-de-hackear/');
 
     let likes = await page.evaluate(() => {
-        //const button = document.querySelector('Header-class-title');
-        const button = document.getElementsByClassName('Header-class-title');
+        const button = document.querySelector('Header-class-title');
+        //const button = document.get;
         console.log(button);// <- Browser log
         console.log(button.innerHTML);// <- Browser log
-        return button.innerHTML;
+        return button;
     })
 
     console.log(likes);// <- Principal thread log (NodeJS)
+    console.log(likes.innerHTML);// <- Principal thread log (NodeJS)
     console.log('Closing browser.');
     browser.close();
     console.log('Deleted browser.');
