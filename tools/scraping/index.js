@@ -9,7 +9,12 @@ const puppeteer = require('puppeteer');
 (async () => {
     // todo
     console.log('Starting browser.');
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+        args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox'
+        ]
+    });
 
     console.log('Closing browser.');
     browser.close();
