@@ -17,7 +17,7 @@ const puppeteer = require('puppeteer');
     });
 
     const page = await browser.newPage();
-    await page.goto('https://platzi.com/clases/2292-terminal/37358-nunca-pares-de-hackear/');
+    await page.goto('https://es.wikipedia.org/wiki/Node.js');
 
     var likes = await page.evaluate(() => {
         const button = document.querySelector('h1');
