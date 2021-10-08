@@ -16,6 +16,17 @@ const puppeteer = require('puppeteer');
         ]
     });
 
+    const page = await browser.newPage();
+    await page.goto('https://platzi.com/clases/2292-terminal/37358-nunca-pares-de-hackear/');
+
+    let likes = await page.evaluate(() => {
+        const button = document.querySelector('Header-class-title');
+        console.log(button);// <- Browser log
+        console.log(button.innerHTML);// <- Browser log
+        return button.innerHTML;
+    })
+
+    console.log(likes);// <- Principal thread log (NodeJS)
     console.log('Closing browser.');
     browser.close();
     console.log('Deleted browser.');
