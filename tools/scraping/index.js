@@ -21,7 +21,7 @@ const puppeteer = require('puppeteer');
 
     var likes = await page.evaluate(() => {
         //const button = document.querySelector('Header-class-title');
-        const button = document.getElementsByClassName('Header-class-title');
+        const button = document.getElementsByClassName('.Header-class-title');
         console.log(button);// <- Browser log
         console.log(button.innerHTML);// <- Browser log
         return button;
