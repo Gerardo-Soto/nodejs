@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const server = require('gulp-server-livereload');
 
 // task name = build
 gulp.task('build', function (callback) {
@@ -7,3 +8,10 @@ gulp.task('build', function (callback) {
 });
 
 
+gulp.task('server', function (cb) {
+    gulp.src('www')
+        .pipe(server({
+            livereload: true,
+            open: true,
+        }))
+})
