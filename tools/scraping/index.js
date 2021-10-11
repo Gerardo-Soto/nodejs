@@ -9,7 +9,12 @@ const puppeteer = require('puppeteer');
 (async () => {
     // todo
     console.log('Starting browser.');
-    const browser = await puppeteer.launch({ headless: false});
+    const browser = await puppeteer.launch({
+        args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox'
+        ]
+    });
 
     const page = await browser.newPage();
     await page.goto('https://es.wikipedia.org/wiki/Node.js');
