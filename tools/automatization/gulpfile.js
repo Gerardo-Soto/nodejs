@@ -9,9 +9,18 @@ gulp.task('build', function (callback) {
 
 
 gulp.task('server', function (cb) {
-    gulp.src('www')
+    gulp.src('www')// ./www/index.html
         .pipe(server({
             livereload: true,
             open: true,
         }))
 })
+
+
+gulp.task('default', gulp.series('build', 'server'));
+
+
+
+
+
+
