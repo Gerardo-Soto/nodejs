@@ -1,7 +1,9 @@
-// Web server
 const http = require('http');
+
+// server config
 const port = 3000
 
+// Web server gives a Callback router and setting port:
 http.createServer(router).listen(port);
 
 function router(req, res) {
